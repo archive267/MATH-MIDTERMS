@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tertiary Mathematics Study Reviewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 320px;
+      max-height: 380px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 360px;
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased custom-scrollbar">
+
+  <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur text-white border-b border-slate-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <span class="bg-indigo-600 text-white font-bold px-3 py-1 rounded-md text-sm tracking-wider">UB MATH</span>
+          <h1 class="font-bold text-lg sm:text-xl tracking-tight text-slate-100">Tertiary Mathematics Reviewer</h1>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#module-1" class="hover:text-cyan-400 transition-colors">1. Set Theory</a>
+          <a href="#module-2" class="hover:text-cyan-400 transition-colors">2. Relations & Functions</a>
+          <a href="#module-3" class="hover:text-cyan-400 transition-colors">3. Logic & Reasoning</a>
+          <a href="#calculators" class="bg-indigo-600 hover:bg-indigo-500 px-3 py-1.5 rounded-lg transition-all text-white font-semibold">Interactive Tools</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-indigo-900">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-block bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest mb-3">Comprehensive Exam Reviewer</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-cyan-400 mb-4">
+          Master Tertiary Mathematics
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed">
+          An interactive, data-visualized study guide covering foundational set operations, relation mappings, polynomial function evaluations, and mathematical logic matrices.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-xl text-center shadow-md">
+          <p class="text-xs uppercase text-slate-400 font-semibold mb-1">Modules Covered</p>
+          <p class="text-2xl sm:text-3xl font-bold text-cyan-400">3 Core</p>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-xl text-center shadow-md">
+          <p class="text-xs uppercase text-slate-400 font-semibold mb-1">Power Set Formula</p>
+          <p class="text-2xl sm:text-3xl font-bold text-emerald-400">2ⁿ Subsets</p>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-xl text-center shadow-md">
+          <p class="text-xs uppercase text-slate-400 font-semibold mb-1">Function Rule</p>
+          <p class="text-2xl sm:text-3xl font-bold text-amber-400">1-to-1 / M-to-1</p>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-xl text-center shadow-md">
+          <p class="text-xs uppercase text-slate-400 font-semibold mb-1">Logical Equivalence</p>
+          <p class="text-2xl sm:text-3xl font-bold text-indigo-400">p → q ≡ ~q → ~p</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <section id="module-1" class="scroll-mt-20">
+      <div class="border-l-4 border-indigo-600 pl-4 mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Module 01</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Set Theory & Operations</h3>
+        <p class="text-slate-600 mt-1">Formal foundations, set representations, algebraic laws, and Inclusion-Exclusion principles.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+          <div class="w-10 h-10 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">S</div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">The Concept of a Set</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">A well-defined collection of distinct objects called elements or members.</p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs font-mono text-slate-700 space-y-1">
+            <p><strong>Roster:</strong> V = {a, e, i, o, u}</p>
+            <p><strong>Builder:</strong> V = {x | x is a vowel}</p>
+            <p><strong>Membership:</strong> 2 ∈ A, 5 ∉ A</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+          <div class="w-10 h-10 bg-cyan-100 text-cyan-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">P</div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Power Set & Subsets</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">The power set ℘(A) contains all possible subsets of A. Total quantity is strictly 2ⁿ.</p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs font-mono text-slate-700 space-y-1">
+            <p><strong>If A = {1, 2}:</strong></p>
+            <p>℘(A) = { ∅, {1}, {2}, {1,2} }</p>
+            <p><strong>Cardinality:</strong> |℘(A)| = 2² = 4</p>
+            <p><strong>Proper Subsets:</strong> 2ⁿ - 1 = 3</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+          <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">E</div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Equality vs Equivalence</h4>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">Equal sets share exact elements. Equivalent sets share identical cardinality.</p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs font-mono text-slate-700 space-y-1">
+            <p><strong>Equal (A = B):</strong> {1,2,3} = {3,2,1}</p>
+            <p><strong>Equivalent (A ~ B):</strong> |{1,2,3}| = |{x,y,z}| = 3</p>
+            <p><strong>Empty Set:</strong> |∅| = 0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden mb-8">
+        <div class="bg-slate-900 text-white p-4 sm:p-6">
+          <h4 class="text-xl font-bold">Fundamental Set Operations Matrix</h4>
+          <p class="text-slate-400 text-sm">Visualizing set relationships and logical connectives</p>
+        </div>
+        <div class="p-4 sm:p-6 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b-2 border-slate-200 text-slate-700 uppercase text-xs tracking-wider">
+                <th class="py-3 px-4">Operation</th>
+                <th class="py-3 px-4">Symbol</th>
+                <th class="py-3 px-4">Logical Equivalent</th>
+                <th class="py-3 px-4">Definition / Rule</th>
+                <th class="py-3 px-4">Given A={1,2,4,8}, B={2,4,6}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-indigo-700">Union</td>
+                <td class="py-3 px-4 font-mono font-bold">A ∪ B</td>
+                <td class="py-3 px-4"><span class="bg-indigo-100 text-indigo-800 font-semibold text-xs px-2 py-0.5 rounded">OR</span></td>
+                <td class="py-3 px-4">Elements in A, or B, or both. Combines distinct elements.</td>
+                <td class="py-3 px-4 font-mono">{1, 2, 4, 6, 8}</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-cyan-700">Intersection</td>
+                <td class="py-3 px-4 font-mono font-bold">A ∩ B</td>
+                <td class="py-3 px-4"><span class="bg-cyan-100 text-cyan-800 font-semibold text-xs px-2 py-0.5 rounded">AND</span></td>
+                <td class="py-3 px-4">Elements shared strictly by both sets.</td>
+                <td class="py-3 px-4 font-mono">{2, 4}</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-amber-700">Relative Difference</td>
+                <td class="py-3 px-4 font-mono font-bold">A \ B</td>
+                <td class="py-3 px-4"><span class="bg-amber-100 text-amber-800 font-semibold text-xs px-2 py-0.5 rounded">A AND NOT B</span></td>
+                <td class="py-3 px-4">Elements exclusively in A; removes any element in B.</td>
+                <td class="py-3 px-4 font-mono">{1, 8}</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-rose-700">Absolute Complement</td>
+                <td class="py-3 px-4 font-mono font-bold">A' or Aᶜ</td>
+                <td class="py-3 px-4"><span class="bg-rose-100 text-rose-800 font-semibold text-xs px-2 py-0.5 rounded">NOT A</span></td>
+                <td class="py-3 px-4">All elements in Universal Set U excluding set A.</td>
+                <td class="py-3 px-4 font-mono">{3, 5, 6, 7} (if U={1..8})</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-purple-700">Symmetric Difference</td>
+                <td class="py-3 px-4 font-mono font-bold">A Δ B</td>
+                <td class="py-3 px-4"><span class="bg-purple-100 text-purple-800 font-semibold text-xs px-2 py-0.5 rounded">XOR</span></td>
+                <td class="py-3 px-4">(A ∪ B) - (A ∩ B). Elements in exactly one set.</td>
+                <td class="py-3 px-4 font-mono">{1, 6, 8}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Venn Diagram Problem Solver (Activity 3)</h4>
+          <p class="text-sm text-slate-600 mb-4">
+            In a class of 100 university students: 60 study Mathematics (M), 50 study Physics (P), and 20 study both subjects. The chart visualizes the precise non-overlapping breakdown calculated using the Principle of Inclusion-Exclusion:
+          </p>
+          <div class="bg-indigo-50 border border-indigo-200 p-4 rounded-lg text-sm text-indigo-950 font-mono mb-4">
+            <p>|M ∪ P| = |M| + |P| - |M ∩ P|</p>
+            <p>|M ∪ P| = 60 + 50 - 20 = 90 students</p>
+            <p>Neither = n(U) - |M ∪ P| = 100 - 90 = <strong>10 students</strong></p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-semibold">
+            <div class="p-2 bg-indigo-100 text-indigo-800 rounded">Math Only: 40</div>
+            <div class="p-2 bg-purple-100 text-purple-800 rounded">Both M & P: 20</div>
+            <div class="p-2 bg-cyan-100 text-cyan-800 rounded">Physics Only: 30</div>
+            <div class="p-2 bg-slate-200 text-slate-800 rounded">Neither: 10</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h5 class="text-sm font-bold text-slate-700 uppercase tracking-wide text-center mb-4">Student Population Segmentation</h5>
+          <div class="chart-container">
+            <canvas id="setVennChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-slate-900 to-indigo-950 text-white p-6 rounded-xl shadow-md border border-indigo-900">
+        <h4 class="text-lg font-bold text-cyan-400 mb-3">Key Algebraic Laws of Sets</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono">
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <span class="text-amber-400 font-bold block mb-1">Commutative & Associative</span>
+            <p>A ∪ B = B ∪ A</p>
+            <p>(A ∩ B) ∩ C = A ∩ (B ∩ C)</p>
+          </div>
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <span class="text-emerald-400 font-bold block mb-1">De Morgan's Laws</span>
+            <p>(A ∪ B)' = A' ∩ B'</p>
+            <p>(A ∩ B)' = A' ∪ B'</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-2" class="scroll-mt-20">
+      <div class="border-l-4 border-cyan-500 pl-4 mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-600">Module 02</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Relations & Functions</h3>
+        <p class="text-slate-600 mt-1">Domain and range analysis, mapping classification, and polynomial function evaluation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Core Concepts: Relation vs Function</h4>
+          <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+            A <strong>relation</strong> is any set of ordered pairs (x, y). The <strong>domain</strong> is the set of all input values (x-coordinates), while the <strong>range</strong> is the set of output values (y-coordinates).
+          </p>
+          <div class="bg-slate-900 text-slate-100 p-4 rounded-lg text-sm font-mono mb-4">
+            <p class="text-cyan-400">// Relation Sample:</p>
+            <p>R = {(-2, 1), (-2, 3), (0, -3), (1, 4), (3, 1)}</p>
+            <p class="mt-2 text-indigo-300">Domain = {-2, 0, 1, 3}</p>
+            <p class="text-indigo-300">Range = {-3, 1, 3, 4}</p>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            A <strong>function</strong> is a special relation where <em>every input x is mapped to EXACTLY ONE output y</em>. It must pass the <strong>Vertical Line Test</strong> on a Cartesian graph.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h5 class="text-sm font-bold text-slate-700 uppercase tracking-wide text-center mb-4">Mapping Classification Matrix</h5>
+          <div class="grid grid-cols-2 gap-3 text-center text-xs">
+            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <span class="w-3 h-3 bg-emerald-500 rounded-full inline-block mb-1"></span>
+              <h6 class="font-bold text-emerald-900 text-sm">One-to-One</h6>
+              <p class="text-emerald-700 mt-1">Each x pairs to unique y.</p>
+              <span class="mt-2 inline-block bg-emerald-200 text-emerald-800 font-bold px-2 py-0.5 rounded">IS FUNCTION</span>
+            </div>
+            <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <span class="w-3 h-3 bg-emerald-500 rounded-full inline-block mb-1"></span>
+              <h6 class="font-bold text-emerald-900 text-sm">Many-to-One</h6>
+              <p class="text-emerald-700 mt-1">Multiple x map to same y.</p>
+              <span class="mt-2 inline-block bg-emerald-200 text-emerald-800 font-bold px-2 py-0.5 rounded">IS FUNCTION</span>
+            </div>
+            <div class="p-4 bg-rose-50 border border-rose-200 rounded-lg">
+              <span class="w-3 h-3 bg-rose-500 rounded-full inline-block mb-1"></span>
+              <h6 class="font-bold text-rose-900 text-sm">One-to-Many</h6>
+              <p class="text-rose-700 mt-1">Single x maps to many y.</p>
+              <span class="mt-2 inline-block bg-rose-200 text-rose-800 font-bold px-2 py-0.5 rounded">NOT FUNCTION</span>
+            </div>
+            <div class="p-4 bg-rose-50 border border-rose-200 rounded-lg">
+              <span class="w-3 h-3 bg-rose-500 rounded-full inline-block mb-1"></span>
+              <h6 class="font-bold text-rose-900 text-sm">Many-to-Many</h6>
+              <p class="text-rose-700 mt-1">Multiple x map to multiple y.</p>
+              <span class="mt-2 inline-block bg-rose-200 text-rose-800 font-bold px-2 py-0.5 rounded">NOT FUNCTION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 mb-8">
+        <h4 class="text-lg font-bold text-slate-900 mb-4">Activity A Solved Key: Function Identification</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="font-bold text-indigo-700">1. J = {(5,10), (-2,10), (15,10), (-4,10)}</span>
+            <p class="text-xs text-slate-600 mt-1">Result: <strong class="text-emerald-600">Function</strong> (Many-to-one; all x values are unique).</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="font-bold text-indigo-700">2. A = {(11,-2), (3,2), (-11,2), (-3,2)}</span>
+            <p class="text-xs text-slate-600 mt-1">Result: <strong class="text-emerald-600">Function</strong> (All x inputs are unique).</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="font-bold text-indigo-700">3. K = {(1,2), (1,3), (2,1), (2,4)}</span>
+            <p class="text-xs text-slate-600 mt-1">Result: <strong class="text-rose-600">Not a Function</strong> (x=1 pairs with 2 & 3).</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="font-bold text-indigo-700">4. L = {(x,y) | y = x²}</span>
+            <p class="text-xs text-slate-600 mt-1">Result: <strong class="text-emerald-600">Function</strong> (Parabola passes vertical line test).</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="font-bold text-indigo-700">5. B = {(x,y) | x² + y² = 9}</span>
+            <p class="text-xs text-slate-600 mt-1">Result: <strong class="text-rose-600">Not a Function</strong> (Circle radius 3; x=0 yields y=±3).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Polynomial Function Curve Visualizer</h4>
+          <p class="text-sm text-slate-600 mb-4">
+            Comparison of polynomial function curves: $g(x) = x^3 + 2x^2 - x - 1$ vs $f(x) = x^3 - 4x^2 + 3x - 2$. Notice how both pass the vertical line test across all real numbers.
+          </p>
+          <div class="chart-container">
+            <canvas id="functionPlotChart"></canvas>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-6 rounded-xl shadow-md border border-slate-800 space-y-4">
+          <h4 class="text-lg font-bold text-cyan-400">Activity B & Exit Pass Step-by-Step Solutions</h4>
+          
+          <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 text-xs font-mono space-y-1">
+            <p class="text-amber-300 font-bold">1. g(x) = x³ + 2x² - x - 1</p>
+            <p>• g(-1) = (-1)³ + 2(-1)² - (-1) - 1 = -1 + 2 + 1 - 1 = <strong>1</strong></p>
+            <p>• g(0) = 0³ + 2(0)² - 0 - 1 = <strong>-1</strong></p>
+            <p>• g(3) = 3³ + 2(3)² - 3 - 1 = 27 + 18 - 4 = <strong>41</strong></p>
+          </div>
+
+          <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 text-xs font-mono space-y-1">
+            <p class="text-emerald-300 font-bold">2. f(x) = x³ - 4x² + 3x - 2 (Exit Pass 1)</p>
+            <p>• f(-2) = (-2)³ - 4(-2)² + 3(-2) - 2 = -8 - 16 - 6 - 2 = <strong>-32</strong></p>
+            <p>• f(3) = (3)³ - 4(3)² + 3(3) - 2 = 27 - 36 + 9 - 2 = <strong>-2</strong></p>
+          </div>
+
+          <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 text-xs font-mono space-y-1">
+            <p class="text-cyan-300 font-bold">3. g(x) = 2x² - x - 1 (Exit Pass 2)</p>
+            <p>• g(-2) = 2(-2)² - (-2) - 1 = 8 + 2 - 1 = <strong>9</strong></p>
+            <p>• g(2) = 2(2)² - (2) - 1 = 8 - 2 - 1 = <strong>5</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-3" class="scroll-mt-20">
+      <div class="border-l-4 border-amber-500 pl-4 mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Module 03</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Induction, Deduction & Logic</h3>
+        <p class="text-slate-600 mt-1">Reasoning patterns, truth table evaluations, and variations of conditional propositions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 bg-amber-100 text-amber-800 rounded-lg flex items-center justify-center font-bold">I</span>
+            <h4 class="text-lg font-bold text-slate-900">Inductive Reasoning</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Derives general conclusions/conjectures from specific observations or trends. Conclusions are <strong>probable</strong>, but not guaranteed to be true.
+          </p>
+          <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs text-amber-900 font-mono space-y-1">
+            <p><strong>Pattern:</strong> 2, 4, 8, 16, ...</p>
+            <p><strong>Conjecture:</strong> Next term will be 32.</p>
+            <p><strong>Observation:</strong> Sun rises in East every day so far → Will probably rise in East tomorrow.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 bg-indigo-100 text-indigo-800 rounded-lg flex items-center justify-center font-bold">D</span>
+            <h4 class="text-lg font-bold text-slate-900">Deductive Reasoning</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Establishes specific conclusions derived logically from accepted general premises or definitions. Conclusions are <strong>guaranteed</strong> true.
+          </p>
+          <div class="bg-indigo-50 border border-indigo-200 p-3 rounded-lg text-xs text-indigo-900 font-mono space-y-1">
+            <p><strong>Premise 1:</strong> Numbers ending in 0 or 5 are divisible by 5.</p>
+            <p><strong>Premise 2:</strong> 35 ends in 5.</p>
+            <p><strong>Conclusion:</strong> 35 is guaranteed divisible by 5.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 mb-8">
+        <h4 class="text-lg font-bold text-slate-900 mb-2">Variations of Conditional Propositions (p → q)</h4>
+        <p class="text-sm text-slate-600 mb-4">
+          A conditional statement and its <strong>contrapositive</strong> are logically equivalent (p → q ≡ ~q → ~p).
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <span class="font-bold text-slate-900 block text-sm mb-1">Direct Conditional</span>
+            <span class="font-mono text-indigo-600 block mb-2">If p, then q</span>
+            <p class="text-slate-600">"If it rained, then the grounds are wet."</p>
+          </div>
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <span class="font-bold text-slate-900 block text-sm mb-1">Converse</span>
+            <span class="font-mono text-indigo-600 block mb-2">If q, then p</span>
+            <p class="text-slate-600">"If the grounds are wet, then it rained."</p>
+          </div>
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <span class="font-bold text-slate-900 block text-sm mb-1">Inverse</span>
+            <span class="font-mono text-indigo-600 block mb-2">If ~p, then ~q</span>
+            <p class="text-slate-600">"If it did not rain, then grounds are not wet."</p>
+          </div>
+          <div class="p-4 bg-emerald-50 border border-emerald-300 rounded-lg">
+            <span class="font-bold text-emerald-900 block text-sm mb-1">Contrapositive</span>
+            <span class="font-mono text-emerald-700 block mb-2">If ~q, then ~p</span>
+            <p class="text-emerald-800">"If grounds are not wet, then it did not rain."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden mb-8">
+        <div class="bg-slate-900 text-white p-4 sm:p-6">
+          <h4 class="text-xl font-bold">Complex Truth Table Analysis: P ↔ (C ∧ ~I)</h4>
+          <p class="text-slate-400 text-sm">Evaluating: Parallel lines P & Q if and only if they are Coplanar C and do NOT Intersect I</p>
+        </div>
+        <div class="p-4 sm:p-6 overflow-x-auto">
+          <table class="w-full text-center border-collapse text-sm font-mono">
+            <thead>
+              <tr class="border-b-2 border-slate-200 text-slate-700 uppercase text-xs">
+                <th class="py-2 px-3">P</th>
+                <th class="py-2 px-3">C</th>
+                <th class="py-2 px-3">I</th>
+                <th class="py-2 px-3 bg-slate-100">~I</th>
+                <th class="py-2 px-3 bg-slate-100">C ∧ ~I</th>
+                <th class="py-2 px-3 bg-indigo-100 text-indigo-900 font-bold">P ↔ (C ∧ ~I)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-rose-50 text-rose-700 font-bold">F</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-emerald-50 text-emerald-700 font-bold">T</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-rose-50 text-rose-700 font-bold">F</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-rose-50 text-rose-700 font-bold">F</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-emerald-50 text-emerald-700 font-bold">T</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-rose-50 text-rose-700 font-bold">F</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-emerald-600 font-bold">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-emerald-50 text-emerald-700 font-bold">T</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 text-rose-600 font-bold">F</td>
+                <td class="py-2 px-3 bg-slate-50 text-emerald-600">T</td>
+                <td class="py-2 px-3 bg-slate-50 text-rose-600">F</td>
+                <td class="py-2 px-3 bg-emerald-50 text-emerald-700 font-bold">T</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Logical Operator Truth Distribution</h4>
+          <p class="text-sm text-slate-600 mb-4">
+            Comparison of true outcomes across 4 fundamental 2-variable compound operators (Conjunction, Disjunction, Conditional, Biconditional).
+          </p>
+          <div class="chart-container">
+            <canvas id="truthDistributionChart"></canvas>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-3">Quick Self-Test Practice Key</h4>
+          <div class="space-y-3 text-sm">
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <span class="font-bold text-indigo-700">Q1: If |A| = 5, how many proper subsets exist?</span>
+              <p class="text-slate-700 mt-1 font-mono">Answer: 2⁵ - 1 = 32 - 1 = <strong>31 proper subsets</strong>.</p>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <span class="font-bold text-indigo-700">Q2: Domain/Range of R = {(1,5), (2,6), (3,7), (4,5)}?</span>
+              <p class="text-slate-700 mt-1 font-mono">Domain = {1, 2, 3, 4}, Range = {5, 6, 7}. <strong>Function!</strong></p>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <span class="font-bold text-indigo-700">Q3: Contrapositive of "If x is a multiple of 4, then x is even"?</span>
+              <p class="text-slate-700 mt-1">Answer: <strong>"If x is not an even number, then x is not a multiple of 4."</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculators" class="scroll-mt-20">
+      <div class="border-l-4 border-indigo-500 pl-4 mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Interactive Workstations</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Live Mathematical Calculators</h3>
+        <p class="text-slate-600 mt-1">Test your understanding dynamically by evaluating polynomials and truth values.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-3">Polynomial Evaluator</h4>
+          <p class="text-xs text-slate-500 mb-4">Select function equation and input value x to calculate precise y-output:</p>
+          
+          <div class="space-y-4 text-sm">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Select Function Equation:</label>
+              <select id="funcSelect" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono text-slate-800 focus:ring-2 focus:ring-indigo-500">
+                <option value="g1">g(x) = x³ + 2x² - x - 1</option>
+                <option value="f1">f(x) = x³ - 4x² + 3x - 2</option>
+                <option value="g2">g(x) = 2x² - x - 1</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Input Value (x):</label>
+              <input type="number" id="xInput" value="3" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono text-slate-800 focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <button onclick="calculateFunction()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-lg transition-colors">
+              Evaluate Output y = f(x)
+            </button>
+
+            <div id="funcResult" class="p-4 bg-indigo-50 border border-indigo-200 rounded-lg font-mono text-indigo-950 font-bold text-center">
+              Result: f(3) = 41
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+          <h4 class="text-lg font-bold text-slate-900 mb-3">Logical Compound Evaluator</h4>
+          <p class="text-xs text-slate-500 mb-4">Choose truth values for p and q to evaluate all 5 basic operators instantly:</p>
+          
+          <div class="space-y-4 text-sm">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Proposition p:</label>
+                <select id="pVal" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono text-slate-800">
+                  <option value="T">True (T)</option>
+                  <option value="F">False (F)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Proposition q:</label>
+                <select id="qVal" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono text-slate-800">
+                  <option value="T">True (T)</option>
+                  <option value="F" selected>False (F)</option>
+                </select>
+              </div>
+            </div>
+
+            <button onclick="evaluateLogic()" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2.5 rounded-lg transition-colors">
+              Compute Logic Operators
+            </button>
+
+            <div id="logicResult" class="p-3 bg-slate-900 text-slate-100 rounded-lg font-mono text-xs space-y-1">
+              <p>• Conjunction (p ∧ q): <span class="text-rose-400 font-bold">FALSE</span></p>
+              <p>• Disjunction (p ∨ q): <span class="text-emerald-400 font-bold">TRUE</span></p>
+              <p>• Conditional (p → q): <span class="text-rose-400 font-bold">FALSE</span></p>
+              <p>• Biconditional (p ↔ q): <span class="text-rose-400 font-bold">FALSE</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-semibold text-slate-300">Tertiary Mathematics Study Reviewer & Interactive Infographic</p>
+      <p class="mt-1">Designed for Set Theory, Functions & Mathematical Logic Exam Preparation.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      initSetVennChart();
+      initFunctionPlotChart();
+      initTruthDistributionChart();
+    });
+
+    function initSetVennChart() {
+      const ctx = document.getElementById('setVennChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            ['Mathematics Only', '(40 Students)'],
+            ['Both Subjects', '(20 Students)'],
+            ['Physics Only', '(30 Students)'],
+            ['Neither Subject', '(10 Students)']
+          ],
+          datasets: [{
+            data: [40, 20, 30, 10],
+            backgroundColor: ['#4f46e5', '#a855f7', '#06b6d4', '#94a3b8'],
+            borderWidth: 2,
+            borderColor: '#ffffff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: { size: 11 },
+                padding: 12
+              }
+            },
+            tooltip: {
+              callbacks: {
+                title: function(tooltipItems) {
+                  const item = tooltipItems[0];
+                  let label = item.chart.data.labels[item.dataIndex];
+                  if (Array.isArray(label)) {
+                    return label.join(' ');
+                  } else {
+                    return label;
+                  }
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function initFunctionPlotChart() {
+      const ctx = document.getElementById('functionPlotChart').getContext('2d');
+      const xVals = [-3, -2, -1, 0, 1, 2, 3, 4];
+      const gVals = xVals.map(x => Math.pow(x, 3) + 2 * Math.pow(x, 2) - x - 1);
+      const fVals = xVals.map(x => Math.pow(x, 3) - 4 * Math.pow(x, 2) + 3 * x - 2);
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: xVals.map(x => 'x = ' + x),
+          datasets: [
+            {
+              label: 'g(x) = x³+2x²-x-1',
+              data: gVals,
+              borderColor: '#4f46e5',
+              backgroundColor: 'rgba(79, 70, 229, 0.1)',
+              tension: 0.3,
+              borderWidth: 2.5
+            },
+            {
+              label: 'f(x) = x³-4x²+' + '3x-2',
+              data: fVals,
+              borderColor: '#06b6d4',
+              backgroundColor: 'rgba(6, 182, 212, 0.1)',
+              tension: 0.3,
+              borderWidth: 2.5
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              grid: { color: '#f1f5f9' }
+            },
+            x: {
+              grid: { color: '#f1f5f9' }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { font: { size: 11 } }
+            },
+            tooltip: {
+              callbacks: {
+                title: function(tooltipItems) {
+                  const item = tooltipItems[0];
+                  let label = item.chart.data.labels[item.dataIndex];
+                  if (Array.isArray(label)) {
+                    return label.join(' ');
+                  } else {
+                    return label;
+                  }
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function initTruthDistributionChart() {
+      const ctx = document.getElementById('truthDistributionChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [
+            ['Conjunction', '(p AND q)'],
+            ['Disjunction', '(p OR q)'],
+            ['Conditional', '(p IF THEN q)'],
+            ['Biconditional', '(p IFF q)']
+          ],
+          datasets: [
+            {
+              label: 'True Rows (out of 4)',
+              data: [1, 3, 3, 2],
+              backgroundColor: '#10b981',
+              borderRadius: 6
+            },
+            {
+              label: 'False Rows (out of 4)',
+              data: [3, 1, 1, 2],
+              backgroundColor: '#f43f5e',
+              borderRadius: 6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 4,
+              ticks: { stepSize: 1 }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { font: { size: 11 } }
+            },
+            tooltip: {
+              callbacks: {
+                title: function(tooltipItems) {
+                  const item = tooltipItems[0];
+                  let label = item.chart.data.labels[item.dataIndex];
+                  if (Array.isArray(label)) {
+                    return label.join(' ');
+                  } else {
+                    return label;
+                  }
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function calculateFunction() {
+      const func = document.getElementById('funcSelect').value;
+      const x = parseFloat(document.getElementById('xInput').value) || 0;
+      let res = 0;
+      let name = '';
+
+      if (func === 'g1') {
+        res = Math.pow(x, 3) + 2 * Math.pow(x, 2) - x - 1;
+        name = 'g(' + x + ')';
+      } else if (func === 'f1') {
+        res = Math.pow(x, 3) - 4 * Math.pow(x, 2) + 3 * x - 2;
+        name = 'f(' + x + ')';
+      } else if (func === 'g2') {
+        res = 2 * Math.pow(x, 2) - x - 1;
+        name = 'g(' + x + ')';
+      }
+
+      document.getElementById('funcResult').innerHTML = 'Result: ' + name + ' = ' + res;
+    }
+
+    function evaluateLogic() {
+      const p = document.getElementById('pVal').value === 'T';
+      const q = document.getElementById('qVal').value === 'T';
+
+      const conj = p && q;
+      const disj = p || q;
+      const cond = !p || q;
+      const bicon = (p && q) || (!p && !q);
+
+      const renderTag = val => val 
+        ? '<span class="text-emerald-400 font-bold">TRUE (T)</span>' 
+        : '<span class="text-rose-400 font-bold">FALSE (F)</span>';
+
+      document.getElementById('logicResult').innerHTML = 
+        '<p>• Conjunction (p ∧ q): ' + renderTag(conj) + '</p>' +
+        '<p>• Disjunction (p ∨ q): ' + renderTag(disj) + '</p>' +
+        '<p>• Conditional (p → q): ' + renderTag(cond) + '</p>' +
+        '<p>• Biconditional (p ↔ q): ' + renderTag(bicon) + '</p>';
+    }
+  </script>
+</body>
+</html>
